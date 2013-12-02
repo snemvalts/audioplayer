@@ -13,6 +13,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    background-color:#141111;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -58,11 +59,6 @@ body {
     padding: 14px 24px;
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-
 .marketing p + h4 {
     margin-top: 28px;
 }
@@ -88,4 +84,34 @@ body {
     .jumbotron {
         border-bottom: 0;
     }
+}
+.play {
+    width: 0; 
+    height: 0; 
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+    border-left: 45px solid black;
+}
+.pause{
+    bottom:2.5em;
+    left:3em;
+    position:relative;
+}
+.pause1{
+    /*set width because of webkit transform*/
+  width:80px;
+  border:8px solid black;
+  -webkit-transform:rotate(90deg);
+  margin-left:30px;
+  margin-bottom:-16px;
+}
+.pause2{
+  width:80px;
+  border:8px solid black;
+  -webkit-transform:rotate(90deg);
+}
+.stop{
+    height:80px;
+    width:80px;
+    background-color:black;
 }

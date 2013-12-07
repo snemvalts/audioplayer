@@ -93,22 +93,8 @@ body {
     border-left: 45px solid black;
 }
 .pause{
-    bottom:2.5em;
-    left:3em;
-    position:relative;
-}
-.pause1{
-    /*set width because of webkit transform*/
-  width:80px;
-  border:8px solid black;
-  -webkit-transform:rotate(90deg);
-  margin-left:30px;
-  margin-bottom:-16px;
-}
-.pause2{
-  width:80px;
-  border:8px solid black;
-  -webkit-transform:rotate(90deg);
+    width:80px;
+    height:100px;
 }
 .stop{
     height:80px;

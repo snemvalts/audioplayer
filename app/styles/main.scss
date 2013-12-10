@@ -91,13 +91,12 @@ body {
     border-top: 45px solid transparent;
     border-bottom: 45px solid transparent;
     border-left: 45px solid black;
+    position:relative;
+    display: none;
 }
 .pause{
+    position:relative;
     width:80px;
     height:100px;
-}
-.stop{
-    height:80px;
-    width:80px;
-    background-color:black;
+    display:none;
 }

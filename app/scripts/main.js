@@ -57,11 +57,22 @@ require.config({
 require(['app', 'jquery'], function (app, $) {
     'use strict';
     // use app here
-    var audio = new Audio();
-    $(".jumbotron").append(audio)
+    var audio;
     $(".play").click(function(){
-        audio.play()
+        audio.play();
     })
+    $(".pause").click(function(){
+        audio.pause();
+    })
+   $("#submitInput").click(function(){
+    console.log("got the click.")
+    audio = new Audio($("#linkInput").val());
+    $(".jumbotron").append(audio);
+    $("#submitInput").toggle();
+    $("#linkInput").toggle();
+    $(".play").toggle();
+    $(".pause").toggle();
+   })
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });

@@ -88,11 +88,12 @@ body {
 .play {
     width: 0; 
     height: 0; 
-    border-top: 45px solid transparent;
-    border-bottom: 45px solid transparent;
-    border-left: 45px solid black;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid black;
     position:relative;
     display: none;
+    margin-right:20px;
 }
 .pause{
     position:relative;

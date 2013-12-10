@@ -70,8 +70,10 @@ require(['app', 'jquery'], function (app, $) {
     $(".jumbotron").append(audio);
     $("#submitInput").toggle();
     $("#linkInput").toggle();
-    $(".play").toggle();
-    $(".pause").toggle();
+    $(".play").toggle()
+              .css("display","inline");
+    $(".pause").toggle()
+                .css("display","inline")
    })
     console.log(app);
     console.log('Running jQuery %s', $().jquery);

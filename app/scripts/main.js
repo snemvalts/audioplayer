@@ -71,9 +71,9 @@ require(['app', 'jquery'], function (app, $) {
     $("#submitInput").toggle();
     $("#linkInput").toggle();
     $(".play").toggle()
-              .css("display","inline");
+              .css("margin-left","11.5px");
     $(".pause").toggle()
-                .css("display","inline")
+                .css("display","block")
    })
     console.log(app);
     console.log('Running jQuery %s', $().jquery);

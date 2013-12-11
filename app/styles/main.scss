@@ -86,18 +86,18 @@ body {
     }
 }
 .play {
-    width: 0; 
-    height: 0; 
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid black;
-    position:relative;
-    display: none;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 50px 0 50px 40px;
+    border-color: transparent transparent transparent #000000;
+    display:none;
+    padding-left:20px;
     margin-right:20px;
 }
 .pause{
-    position:relative;
-    width:80px;
+
+    width:0px;
     height:100px;
     display:none;
 }

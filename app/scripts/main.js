@@ -58,14 +58,19 @@ require(['app', 'jquery'], function (app, $) {
     'use strict';
     // use app here
     var audio;
+    var updateInterval;
     $(".play").click(function(){
         audio.play();
+        /*updateInterval = window.setInterval(function(){
+
+        },1000)*/
     })
     $(".pause").click(function(){
         audio.pause();
+        console.log(audio.currentTime)
+        console.log(audio.totalTime)
     })
    $("#submitInput").click(function(){
-    console.log("got the click.")
     audio = new Audio($("#linkInput").val());
     $(".jumbotron").append(audio);
     $("#submitInput").toggle();
@@ -74,7 +79,15 @@ require(['app', 'jquery'], function (app, $) {
               .css("margin-left","11.5px");
     $(".pause").toggle()
                 .css("display","block")
+    progressCalculator()
    })
+   function progressCalculator(currentTime,totalTime){
+    if($("#progressBar").length == 0) $(".jumbotron").append("<div id='progressBar'></div>")
+    if(currentTime !== undefined && totalTime !== undefined){ 
+    var percentage = (currentTime/totalTime)*100;
+    $("#progressBar").css("width",percentage+"%");
+}
+}
     console.log(app);
     console.log('Running jQuery %s', $().jquery);
 });

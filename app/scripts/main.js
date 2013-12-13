@@ -61,14 +61,14 @@ require(['app', 'jquery'], function (app, $) {
     var updateInterval;
     $(".play").click(function(){
         audio.play();
-        /*updateInterval = window.setInterval(function(){
-
-        },1000)*/
+        updateInterval = window.setInterval(function(){
+            progressCalculator(audio.currentTime,audio.duration)
+        },1000)
     })
     $(".pause").click(function(){
         audio.pause();
         console.log(audio.currentTime)
-        console.log(audio.totalTime)
+        console.log(audio.duration)
     })
    $("#submitInput").click(function(){
     audio = new Audio($("#linkInput").val());
@@ -79,7 +79,6 @@ require(['app', 'jquery'], function (app, $) {
               .css("margin-left","11.5px");
     $(".pause").toggle()
                 .css("display","block")
-    progressCalculator()
    })
    function progressCalculator(currentTime,totalTime){
     if($("#progressBar").length == 0) $(".jumbotron").append("<div id='progressBar'></div>")
